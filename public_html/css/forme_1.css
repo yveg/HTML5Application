@@ -1,0 +1,183 @@
+body {
+    font-family: cursive;
+    font-size: 1em;
+    background-color: #330033;
+    color: burlywood;
+      text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+h1 {
+    display:block;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 40px;
+    text-align: center;
+    align-content: center;
+    float: center;
+      text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+a { 
+    color: #ffcccc;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: #ff3333;
+}
+.lancerjeu input{
+    text-align: center;
+    float:right;
+    margin-right: 400px; 
+    
+}
+
+.carre {
+    margin-left: 100px;
+    padding-left: 25px;
+    width: 80%;
+    //background-color: green;
+    background-color: rgba(0, 128, 0,0.4);
+    //opacity: 0.4;
+    border-style: dashed;
+    border-color: bisque aliceblue;
+     border-radius: 25px;
+    //border-color: #ff0000 #0000ff;
+}
+.shadow {
+    margin-left: 100px;
+     text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+.div1{
+    font-family: cursive;
+        color: burlywood;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+hr.style11 {
+	height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+    border: 0;
+    background-color:#330033;
+}
+
+hr.style13 {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+        
+}
+
+hr.style18 { 
+  height: 30px; 
+  border-style: solid; 
+  border-color: chartreuse;
+  border-width: 1px 0 0 0; 
+  border-radius: 300px; 
+} 
+hr.style18:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: darkgreen;
+  border-width: 0 0 1px 0; 
+  border-radius: 30px; 
+}
+
+.titre {
+    font-size: 1.5em;
+    
+}
+p.boutton {
+    color: #08233e;
+    font:2.4em Futura,'Century Gothic',AppleGothic,sans-serif;
+    font-size: 70%;
+    padding: 14px;
+     background: url(overlay.png) reapeat-x center #ffc00;
+     background-color: rgba(255,204,0,1);
+     border:1px solid #ffc00;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     border-radius: 10px;
+     border-bottom: 1px solid #9f9f9f;
+     -moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+     -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+     box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+     cursor: pointer;
+     text-align: center;
+}
+
+p.boutton:hover {
+    background-color: rgba(255,204,0,0.8);
+}
+
+.jcarte {}
+.avatar{}
+.sortilege input{
+    width: 87px;
+    height: 87px;
+    opacity: 0.5;
+}
+.sortilege input:hover{
+    width: 116px;
+    height: 116px;
+    border-color: #ffcccc;
+    border-style: ridge;
+    border-radius: 12px;
+}
+
+infosort input:hover .text{
+visibility:visible;
+}
+infosort input .text {
+position:relative;
+bottom:30px;
+left:0px;
+visibility:hidden;
+}
+infosort input {
+  position: relative;
+
+  font-size: 0.9em;
+  color: #ffffff;
+  cursor: pointer;
+  
+}
+
+infosort input span {
+  display: none;
+  color: burlywood;
+}
+
+infosort:hover input{
+  background-color: rgba(255, 255, 255, 0.7);
+  display: block;
+}
+
+
+
+//a:unvisited, a:active, a:visited, a:link  {

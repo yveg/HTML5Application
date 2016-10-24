@@ -1,0 +1,105 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 oct. 2016, 17:57:00
+    Author     : yvo
+Breip
+*/
+
+select#choixim option[value="male"]   { background-image:url('../image/tete/vert.png');   background: url("../image/tete/vert.png");  }
+select#choixim option[value="female"] { background-image:url("../image/tete/raton.png");  background: url("../image/tete/raton.png");  }
+select#choixim option[value="others"] { background-image:url("../image/tete/bleu.png"); background: url("../image/tete/bleu.png"); }
+
+body{
+    background-color: #330033;
+    text-decoration: none;
+    color: #ffcccc;
+    font-family:  Comfortaa, Comic sans ms; 
+    font-size: 1em;
+    text-transform: capitalize;
+    scrollbar-face-color: #000000;
+    scrollbar-shadow-color: #2D2C4D;
+    scrollbar-highlight-color:#7D7E94;
+    scrollbar-3dlight-color: #7D7E94;
+    scrollbar-darkshadow-color: #2D2C4D;
+    scrollbar-track-color: #7D7E94;
+    scrollbar-arrow-color: #C1C1D1;
+}
+.fd_sorcier {
+    background-image: url('../image/sorcer001.jpg');
+    opacity: 0.4;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.fd_2 {
+    background-image: url("../image/tete/vert.png");
+    background-repeat: no-repeat;
+}
+.divx {
+    text-align: center
+}
+
+.champ {}
+
+.boutton {
+  color:#08233e;
+  font:2.4em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  font-size:70%;
+  padding:14px;
+  background:url(overlay.png) repeat-x center #ffcc00;
+  background-color:rgba(255,204,0,1);
+  border:1px solid #ffcc00;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+  border-bottom:1px solid #9f9f9f;
+  -moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+  -webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+  cursor:pointer;
+ }
+ .boutton:hover {
+  background-color:rgba(255,204,0,0.8);
+ }
+a  {
+    color: coral;
+    text-decoration: none;
+}
+
+a:unvisited, a:active, a:visited, a:link  {
+    color: #ffcccc;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: #ff3333;
+}
+.center {
+    text-align: center;
+}
+h1{
+    font-family: Lucida  handwriting;
+    font-size: 2.5em;
+    text-shadow: -1px 0 0 rgba(0, 0, 0, 0.8), 
+        1px 0 0 rgba(0, 0, 0, 0.8),
+        0 -1px 0 rgba(0, 0, 0, 0.8),
+        0 1px 0 rgba(0, 0, 0, 0.8);
+}
+h2 {
+    text-align: center;
+    font-family: Lucida  handwriting;
+    font-size: 1.5em;
+    text-shadow: -1px 0 0 rgba(0, 0, 0, 0.8), 
+        1px 0 0 rgba(0, 0, 0, 0.8),
+        0 -1px 0 rgba(0, 0, 0, 0.8),
+        0 1px 0 rgba(0, 0, 0, 0.8);
+}

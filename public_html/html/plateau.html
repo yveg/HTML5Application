@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link href="../css/forme.css" rel="stylesheet" type="text/css"/>
+        <script src="../js/jquery-3.1.1.js" type="text/javascript"></script>
+        <script src="../js/magie.js" type="text/javascript"></script>
+        <!--<script type="text/javascript">
+            //setInterval("alert("echo"),location.reload(forceGet), 5000);
+            //setInterval(function(){ alert("Hello"); }, 5000);
+            setInterval(function () {
+                location.reload(true);
+            }, 5000);
+            
+            get
+        </script>
+        -->
+    </head>
+    <body>
+        <h1>Plateau du jeu Magie en cours</h1>
+        <nav>
+           <p><a href="html/home.html" target="_self">vers home</a></p>
+                 <p><a href="index.html" target="_self">vers index</a></p>
+        
+    </nav>
+        <section>
+            <div class="infoevent">
+                <p class="shadow">Vous &ecirc;tes: ${joueuractuel}</p>
+        <p class="shadow">Le tour est &agrave;: ${tour}</p>
+            </div>
+            <div class="evenet">
+                <span class="essai"> an user has been slain<br>pentakill</span>
+            </div>
+        <!--debut menu joueur-->
+        <div class="menujoueur">
+        <p>voici tes cartes:<br>
+            <c:forEach var="displayjoueur" items="${joueurs}">
+                    <c:if test="${joueuractuel == displayjoueur.pseudo}">
+$displayjoueur.pseudo
+<div class="avatar"></div>
+                      <!--  <c:out value="${displayjoueur.pseudo}"></c:out>&nbsp;&nbsp;
+                        <c:forEach var="displayingredient" items="${displayjoueur.ingredients}"> d ${displayjoueur.ingredients} 5
+                            <input type="image"  src="Images/dos2carte/0001.png" onclick="setidcard" ></input> &nbsp;&nbsp;  
+                        </c:forEach>
+                    </c:if>
+            </c:forEach>
+                      -->
+                      <div align="center">
+    <p class="jcarte">
+        Tes cartes d'ingr&eacute;dients s'affichent ici:<br>
+    
+    </p>
+                      </div>
+        </p>
+        <hr class="style13">
+        
+        <p>Voici tes actions possibles:</p>
+        <p>
+        <div class="menuactionj">
+            <table>
+                <form class="sortilege">
+                    <tr><td><input class="inviz" type="image" value="invisibility" src="../image/sort/invisibilite.png" alt="le joueur prend 1 carte(au hasard) chez tous ses adversaires
+                       Ingr&eacute;dients: corne de licorne + bave de crapaud" />&nbsp;
+              <span class="invi">
+                  <br>Le joueur prend 1 carte au hasard chez tous ses adversaires<br>
+                  Ingr&eacute;dients n&eacute;cessaires: corne de licorne + bave de crapaud
+                       </span>
+                        </td>
+                        <td>
+              <input class="inviz" type="image" value="filtre d'amour" src="../image/sort/elixir.png" alt="le joueur de votre choix vous donne la moitie de ses cartes(au hasard). S il ne possede qu une carte il a perdu" >&nbsp;
+              <span class="invi">
+                  Le joueur de ton choix te donne la moiti&eacute; de ses cartes au hasard. S il ne poss&egrave;de qu une carte il a perdu.<br>
+                  Ingr&eacute;dients n&eacute;cessaires:  corne de licorne + sang de vierge
+              </span>
+                        </td>
+                        <td>
+              <input class="inviz" type="image"  value="hypnose" src="../image/sort/hypnose.png" />&nbsp;
+                <span class="invi">
+                    Tu &eacute;change une carte de ton choix contre trois cartes au hasard  de ton adversaire<br>
+                    Ingr&eacute;dients n&eacute;cessaires:  bave de crapaud + lapis-lazuli
+              </span>
+                        </td>
+                        <td>
+                <input class="inviz" type="image"  value="sommeil" src="../image/sort/sommeil.png" />&nbsp;
+                  <span class="invi">
+                      Tu choisis une victime qui ne pourra pas lancer de sorts pendant 2 tours<br>
+                      Ingr&eacute;dients n&eacute;cessaires:  sang de vierge + bave de crapaud
+              </span>
+                        </td>
+                        <td>
+                <input class="inviz" type="image"  value="divination" src="../image/sort/divination.png" />&nbsp;
+                  <span class="invi">
+                      Tu peus voir les cartes de tous les autres joueurs<br>
+                      Ingr&eacute;dients n&eacute;cessaires: lapis-lazuli + aile-de chauve-souris
+              </span>
+                        </td>
+                </tr>
+            </form>
+            </table>
+        </div>
+        </p>
+       <!-- <p class="boutton" >
+            <input  type="button" value="INVISIBILITE"/> &nbsp;&nbsp;
+            <input type="button" value="FILTRE D’AMOUR"/>&nbsp;&nbsp;
+            <input type="button" value="HYPNOSE"/> &nbsp;&nbsp;<input type="button" value="DIVINATION"/>&nbsp;&nbsp;
+            <input type="button" value="SOMMEIL-PROFOND"/> &nbsp;&nbsp;
+        </p>
+       -->
+           <div>
+            <form>
+                <!--c foreach de joueurs de cette partie a faire-->
+                <p>
+                    <label for="choix_joueurs">Entre un nom de joueur : &nbsp;</label>
+                    <input list="player" type="text" id="choix_joueurs" >
+<datalist id="player">
+  <option value="Thomas">
+  <option value="Julien">
+  <option value="Amaury">
+  <option value="Edouard">
+</datalist>
+                </p>
+                <p>Selectionne un joueur ici: &nbsp;
+                    <select name="victime" size="1" onselect="">
+<option>Abdulattif
+<option>Maxim
+<option>Jerome
+<option>Nordine
+<option>Laurent
+</select>
+                </p>
+                <!-- debut code java-
+                 <p>Selectionne un joueur ici: &nbsp;
+                    <select name="victime" size="1" onselect="">
+                <c:forEach var="displayjoueur" items="${joueurs}">
+                    <c:if test="${joueuractuel != displayjoueur.pseudo}">
+                        <option>
+                        <c:out value="${displayjoueur.pseudo}"></c:out>
+                </c:forEach
+                    </c:if>
+                </select>
+                </p>
+                fin code java-->
+            </form>
+        </div>
+       
+       </div>
+    
+        <!--fin menujoueur-->
+        </section>
+        
+        <section><!--liste des joueurs -->
+            
+        <hr class="style18"><br>
+        <div class="carre">
+            <p class="shadow titre">Nom des joueurs en liste:</p>
+            <p>
+                <c:forEach var="displayjoueur" items="${joueurs}">
+                    <c:if test="${joueuractuel != displayjoueur.pseudo}">
+
+                        <c:out value="${displayjoueur.pseudo}"></c:out>&nbsp;&nbsp;
+                        <c:forEach var="displayingredient" items="${displayjoueur.ingredients}">
+                            <input type="image"  src="Images/dos2carte/0001.png" onclick="setidcard" ></input> &nbsp;&nbsp;  
+                        </c:forEach>
+                    </c:if>
+                </p>
+                <hr class="style13">
+            </c:forEach>
+        </div>
+        </section>
+        <hr class="style11">
+    </body>
+</html>
+
